@@ -11,5 +11,28 @@
         <action name="index">
             <result>/jsp/index.jsp</result>
         </action>
+        
+        <!-- Action listant les projets -->
+        <action name="projet_list"
+        		class="org.example.demo.ticket.webapp.action.GestionProjetAction"
+        		method="doList">
+        		<result>/jsp/projet/list.jsp</result>
+        </action>
+        
+        <!-- Action affichant le détail d'un projet -->
+        <action name="projet_detail"
+        		class="org.example.demo.ticket.webapp.action.GestionProjetAction"
+        		method="doDetail">
+        		<result name="success">/jsp/projet/detail.jsp</result>
+        		<result name="error">/jsp/error.jsp</result>
+        </action>
+        
+        <!-- Action affichant le détail d'un utilisateur -->
+        <action name="utilisateur_detail"
+        		class="org.example.demo.ticket.webapp.action.GestionProjetAction"
+        		method="doDetail">
+        		<result name="success">/jsp/utilisateur/detail.jsp</result>
+        		<result name="error">/jsp/error.jsp</result>
+        </action>
     </package>
 </struts>
