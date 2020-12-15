@@ -67,7 +67,13 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-        </dependency>
+        </dependency>        
+        
+        <!-- Framework Apache Struts -->
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-core</artifactId>
+        </dependency>       
     </dependencies>
 
     <!-- =============================================================== -->
