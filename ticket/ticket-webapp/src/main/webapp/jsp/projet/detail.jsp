@@ -5,8 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Ticket</title>
+	<%@ include file="../_include/head.jsp" %>
 </head>
 <body>
     <h2>Détail du projet</h2>

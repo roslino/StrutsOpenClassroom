@@ -5,12 +5,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<%@ include file="_include/head.jsp" %>
 </head>
 <body>
-	<h2>Bienvenue sur l'application Ticket utilisant Apache Struts !</h2>
+	<!-- <h2>Bienvenue sur l'application Ticket utilisant Apache Struts !</h2> -->
+	<h2>
+		<s:text name="home.welcome"></s:text>
+	</h2>
 	
-	 <s:a action="projet_list">Liste des projets</s:a>
+	<%--  <s:a action="projet_list">Liste des projets</s:a> --%>
+	<s:a action="projet_list">
+		<s:text name="nav.listProjet"></s:text>
+	</s:a>
 </body>
 </html>

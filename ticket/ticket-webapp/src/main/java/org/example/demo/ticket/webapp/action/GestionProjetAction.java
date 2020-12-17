@@ -1,5 +1,6 @@
 package org.example.demo.ticket.webapp.action;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.example.demo.ticket.model.bean.projet.Projet;
@@ -45,17 +46,18 @@ public class GestionProjetAction extends ActionSupport {
     }
 
     /**
-     * Action affichant les détails d'un projet
+     * Action affichant les détails d'un {@link Projet}
      * @return success / error
      */
     public String doDetail() {
         if (id == null) {
-            this.addActionError("Vous devez indiquer un ID de projet.");
+            this.addActionError(getText("error.project.missing.id"));
         } else {
             try {
                 projet = WebappHelper.getManagerFactory().getProjetManager().getProjet(id);
             } catch (NotFoundException e) {
-                this.addActionError("Projet non trouvé. ID = " + id);
+                //this.addActionError("Projet non trouvé. ID = " + id);
+                this.addActionError(getText("error.project.notfound", Collections.singletonList(id)));
             }
         }
         return (this.hasErrors()) ? ActionSupport.ERROR : ActionSupport.SUCCESS;

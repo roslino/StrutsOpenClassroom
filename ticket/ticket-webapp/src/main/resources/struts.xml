@@ -7,6 +7,9 @@
         <!-- Action par défaut -->
         <default-action-ref name="index" />
 
+		<global-results>
+			<result name="error">/jsp/error.jsp</result>
+		</global-results>
         <!-- Action "index" -->
         <action name="index">
             <result>/jsp/index.jsp</result>
@@ -24,7 +27,6 @@
         		class="org.example.demo.ticket.webapp.action.GestionProjetAction"
         		method="doDetail">
         		<result name="success">/jsp/projet/detail.jsp</result>
-        		<result name="error">/jsp/error.jsp</result>
         </action>
         
         <!-- Action affichant le détail d'un utilisateur -->
@@ -32,7 +34,6 @@
         		class="org.example.demo.ticket.webapp.action.GestionProjetAction"
         		method="doDetail">
         		<result name="success">/jsp/utilisateur/detail.jsp</result>
-        		<result name="error">/jsp/error.jsp</result>
         </action>
     </package>
 </struts>
