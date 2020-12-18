@@ -26,6 +26,12 @@
         <action name="projet_detail"
         		class="org.example.demo.ticket.webapp.action.GestionProjetAction"
         		method="doDetail">
+        		
+        		<interceptor-ref name="store">
+        			<param name="operationMode">RETRIEVE</param>
+        		</interceptor-ref>     	
+        		<interceptor-ref name="defaultStack" />
+        	
         		<result name="success">/jsp/projet/detail.jsp</result>
         </action>
         
@@ -34,6 +40,22 @@
         		class="org.example.demo.ticket.webapp.action.GestionProjetAction"
         		method="doDetail">
         		<result name="success">/jsp/utilisateur/detail.jsp</result>
+        </action>     
+        
+        <action name="projet_new"
+        	    class="org.example.demo.ticket.webapp.action.GestionProjetAction"
+        	    method="doCreate">
+        	    
+        	<interceptor-ref name="store">
+        		<param name="operationMode">RETRIEVE</param>
+        	</interceptor-ref>     	
+        	<interceptor-ref name="defaultStack" />
+        
+        	<result name="input">/jsp/projet/new.jsp</result>
+        	<result name="success" type="redirectAction">
+        		<param name="actionName">projet_detail</param>
+        		<param name="id">${projet.id}</param>
+        	</result>
         </action>
     </package>
 </struts>

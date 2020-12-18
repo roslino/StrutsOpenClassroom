@@ -11,5 +11,11 @@
     <h2>Une erreur s'est produite</h2>
 
     <s:actionerror />
+    
+    <s:bean name="java.util.Date" var="now" />
+    
+    <s:text name="error.metadata">
+    	<s:param value="now"></s:param>
+    </s:text>
 </body>
 </html>

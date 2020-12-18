@@ -13,9 +13,22 @@
 		<s:text name="home.welcome"></s:text>
 	</h2>
 	
-	<%--  <s:a action="projet_list">Liste des projets</s:a> --%>
-	<s:a action="projet_list">
-		<s:text name="nav.listProjet"></s:text>
-	</s:a>
+	<nav>
+		<s:a action="projet_list">
+			<s:text name="nav.listProjet"></s:text>
+		</s:a>
+	</nav>
+	
+	<footer>
+		<s:a action="index">
+			<s:param name="request_locale">en</s:param>
+			[English]
+		</s:a>
+		
+		<s:a action="index">
+			<s:param name="request_locale">fr</s:param>
+			[Francais]
+		</s:a>
+	</footer>
 </body>
 </html>
